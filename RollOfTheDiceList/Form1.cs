@@ -16,21 +16,21 @@ namespace RollOfTheDiceList
         {
             InitializeComponent();
         }
-        static void Display(int[] numberSum)
+        void Display(int[] numberSum)
         {
-            List<string> rollIndex = new List<string>(); 
-            string[] numberList = { "1", "2", "3", "4", "5", "6", "8", "9", "10", "11", "12" };
+            string numberIndex = "";
+            string sumIndex = "";
+            string[] numberList = {"2", "3", "4", "5", "6", "8", "9", "10", "11", "12" };
             foreach(string number in numberList)
             {
-                string numberIndex = number.PadLeft(2) + " |";
-                rollIndex.Add(numberIndex);
+                numberIndex += number.PadLeft(2) + " |";
             }
+            RollDisplay.Items.Add(numberIndex);
             foreach(int sum  in numberSum)
             {
-                string sumIndex = sum.ToString().PadLeft(2) + " |";
-                rollIndex.Add(sumIndex);
+                sumIndex += sum.ToString().PadLeft(2) + " |";
             }
-            
+            RollDisplay.Items.Add(sumIndex);
         }
 
         private void RollDice_Click(object sender, EventArgs e)
@@ -47,5 +47,6 @@ namespace RollOfTheDiceList
             }
             Display(rolls);
         }
+        
     }
 }

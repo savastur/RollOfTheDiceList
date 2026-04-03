@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.RollDisplay = new System.Windows.Forms.RichTextBox();
             this.RollDice = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RollDisplay = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // RollDisplay
-            // 
-            this.RollDisplay.AccessibleDescription = "Keeps track of how many time\'s a number is rolled";
-            this.RollDisplay.AccessibleName = "Roll Index";
-            this.RollDisplay.Location = new System.Drawing.Point(21, 12);
-            this.RollDisplay.Name = "RollDisplay";
-            this.RollDisplay.Size = new System.Drawing.Size(723, 296);
-            this.RollDisplay.TabIndex = 0;
-            this.RollDisplay.Text = "";
             // 
             // RollDice
             // 
@@ -79,13 +69,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // RollDisplay
+            // 
+            this.RollDisplay.AccessibleDescription = "Keeps track of how many times a number is rolled";
+            this.RollDisplay.AccessibleName = "Rolls Display";
+            this.RollDisplay.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.RollDisplay.FormattingEnabled = true;
+            this.RollDisplay.HorizontalExtent = 12;
+            this.RollDisplay.HorizontalScrollbar = true;
+            this.RollDisplay.ItemHeight = 16;
+            this.RollDisplay.Location = new System.Drawing.Point(97, 31);
+            this.RollDisplay.MultiColumn = true;
+            this.RollDisplay.Name = "RollDisplay";
+            this.RollDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RollDisplay.Size = new System.Drawing.Size(335, 148);
+            this.RollDisplay.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.RollDisplay);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -94,11 +100,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox RollDisplay;
         private System.Windows.Forms.Button RollDice;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox RollDisplay;
     }
 }
 
