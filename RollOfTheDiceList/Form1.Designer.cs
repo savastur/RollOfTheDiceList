@@ -57,6 +57,7 @@
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // groupBox1
             // 
@@ -73,16 +74,16 @@
             // 
             this.RollDisplay.AccessibleDescription = "Keeps track of how many times a number is rolled";
             this.RollDisplay.AccessibleName = "Rolls Display";
-            this.RollDisplay.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.RollDisplay.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RollDisplay.ForeColor = System.Drawing.Color.Black;
             this.RollDisplay.FormattingEnabled = true;
-            this.RollDisplay.HorizontalExtent = 12;
+            this.RollDisplay.HorizontalExtent = 20;
             this.RollDisplay.HorizontalScrollbar = true;
-            this.RollDisplay.ItemHeight = 16;
-            this.RollDisplay.Location = new System.Drawing.Point(97, 31);
-            this.RollDisplay.MultiColumn = true;
+            this.RollDisplay.ItemHeight = 23;
+            this.RollDisplay.Location = new System.Drawing.Point(33, 31);
             this.RollDisplay.Name = "RollDisplay";
             this.RollDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RollDisplay.Size = new System.Drawing.Size(335, 148);
+            this.RollDisplay.Size = new System.Drawing.Size(704, 257);
             this.RollDisplay.TabIndex = 4;
             // 
             // Form1

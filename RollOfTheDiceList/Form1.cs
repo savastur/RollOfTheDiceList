@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Sturm Savage
+//RCET2265
+//Spring Semester 2026
+//https://github.com/savastur/RollOfTheDiceList.git
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,17 +22,21 @@ namespace RollOfTheDiceList
         }
         void Display(int[] numberSum)
         {
+            string header = "Your Rolls";
+            RollDisplay.Items.Add(header);
             string numberIndex = "";
             string sumIndex = "";
             string[] numberList = {"2", "3", "4", "5", "6", "8", "9", "10", "11", "12" };
             foreach(string number in numberList)
             {
-                numberIndex += number.PadLeft(2) + " |";
+                //increments every number into numberIndex
+                numberIndex += number.PadLeft(5) + " |";
             }
             RollDisplay.Items.Add(numberIndex);
             foreach(int sum  in numberSum)
             {
-                sumIndex += sum.ToString().PadLeft(2) + " |";
+                //increments every sum into sumIndex
+                sumIndex += sum.ToString().PadLeft(5) + " |";
             }
             RollDisplay.Items.Add(sumIndex);
         }
@@ -47,6 +55,11 @@ namespace RollOfTheDiceList
             }
             Display(rolls);
         }
-        
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            //Ends Program
+            this.Close();
+        }
     }
 }
